@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript,apply,call,js,前端," />
 
 
 
@@ -84,18 +84,22 @@
 
 
 
-<meta name="description" content="测试标签页面（Tag Plugins） orem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolo">
+<meta name="description" content="前几天在网上看了看了js call 的使用，有点犯迷糊，今天正好看书看到了这边，顺便记录一下,水平有限，对js也没有自己的理解，基本是摘抄原文。主要是自己做个记录，二来是测试一下Hexo的markdown语法，各位看官不要介意，虽然我知道，不一定有人来看，全当我自说自话。
+定义
+在Function对象中包含apply与call这两种方法，通过他们调用的函数的this引用，可以指向任意特定的对象。也">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello Word">
-<meta property="og:url" content="http://yoursite.com/2016/08/13/Hello-Word/index.html">
+<meta property="og:title" content="JavaScript apply与call 的使用">
+<meta property="og:url" content="http://yoursite.com/2016/08/21/JavaScript-apply与call-的使用/index.html">
 <meta property="og:site_name" content="寂寞的老王">
-<meta property="og:description" content="测试标签页面（Tag Plugins） orem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolo">
-<meta property="og:image" content="http://yoursite.com/path/to/image">
-<meta property="og:updated_time" content="2016-08-14T02:37:44.789Z">
+<meta property="og:description" content="前几天在网上看了看了js call 的使用，有点犯迷糊，今天正好看书看到了这边，顺便记录一下,水平有限，对js也没有自己的理解，基本是摘抄原文。主要是自己做个记录，二来是测试一下Hexo的markdown语法，各位看官不要介意，虽然我知道，不一定有人来看，全当我自说自话。
+定义
+在Function对象中包含apply与call这两种方法，通过他们调用的函数的this引用，可以指向任意特定的对象。也">
+<meta property="og:updated_time" content="2016-08-21T12:43:10.873Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello Word">
-<meta name="twitter:description" content="测试标签页面（Tag Plugins） orem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolo">
-<meta name="twitter:image" content="http://yoursite.com/path/to/image">
+<meta name="twitter:title" content="JavaScript apply与call 的使用">
+<meta name="twitter:description" content="前几天在网上看了看了js call 的使用，有点犯迷糊，今天正好看书看到了这边，顺便记录一下,水平有限，对js也没有自己的理解，基本是摘抄原文。主要是自己做个记录，二来是测试一下Hexo的markdown语法，各位看官不要介意，虽然我知道，不一定有人来看，全当我自说自话。
+定义
+在Function对象中包含apply与call这两种方法，通过他们调用的函数的this引用，可以指向任意特定的对象。也">
 
 
 
@@ -116,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/13/Hello-Word/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/21/JavaScript-apply与call-的使用/"/>
 
-  <title> Hello Word | 寂寞的老王 </title>
+  <title> JavaScript apply与call 的使用 | 寂寞的老王 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -258,7 +262,7 @@
             
             
               
-                Hello Word
+                JavaScript apply与call 的使用
               
             
           </h1>
@@ -270,8 +274,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-13T10:00:22+00:00" content="2016-08-13">
-              2016-08-13
+            <time itemprop="dateCreated" datetime="2016-08-21T12:00:19+00:00" content="2016-08-21">
+              2016-08-21
             </time>
           </span>
 
@@ -281,8 +285,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/13/Hello-Word/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/13/Hello-Word/" itemprop="commentsCount"></span>
+                <a href="/2016/08/21/JavaScript-apply与call-的使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/21/JavaScript-apply与call-的使用/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -305,22 +309,15 @@
       
 
       
-        <h3 id="测试标签页面（Tag-Plugins）"><a href="#测试标签页面（Tag-Plugins）" class="headerlink" title="测试标签页面（Tag Plugins）"></a>测试标签页面（Tag Plugins）</h3> <blockquote><p>orem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+        <p>前几天在网上看了看了js <code>call</code> 的使用，有点犯迷糊，今天正好看书看到了这边，顺便记录一下,水平有限，对js也没有自己的理解，基本是摘抄原文。主要是自己做个记录，二来是测试一下Hexo的markdown语法，各位看官不要介意，虽然我知道，不一定有人来看，全当我自说自话。</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<p>在Function对象中包含apply与call这两种方法，通过他们调用的函数的this引用，可以指向任意特定的对象。也就是说，可以理解为它们能够显性地指定接收方对象。<br><a id="more"></a></p>
 </blockquote>
-<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.  </p>
-<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote> 
-<a id="more"></a>
-<h3 id="引用网络上的文章"><a href="#引用网络上的文章" class="headerlink" title="引用网络上的文章"></a>引用网络上的文章</h3><blockquote><p>Every interaction is both precious and an opportunity to delight.  </p>
-<footer><strong>Seth Godin</strong><cite><a href="http://blog.jobbole.com/86614/" target="_blank" rel="external">blog.jobbole.com/86614</a></cite></footer></blockquote>  
-<h3 id="代码引用（Code-Block）"><a href="#代码引用（Code-Block）" class="headerlink" title="代码引用（Code Block）"></a>代码引用（Code Block）</h3><figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line">code snippet  </div></pre></td></tr></table></figure>  
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(&apos;Hello World!&apos;);</div></pre></td></tr></table></figure>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">test</span><span class="params">()</span></span>&#123;</div><div class="line">        $user = I(<span class="string">'post.username'</span>);</div><div class="line">        $pwd = I(<span class="string">'post.passwd'</span>);</div><div class="line">        <span class="keyword">if</span>(!<span class="keyword">empty</span>($user)||$pwd)&#123;</div><div class="line">            <span class="keyword">echo</span> <span class="string">'用户名不能为空'</span>;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">&#125;   </div></pre></td></tr></table></figure>  
-<figure class="highlight plain"><figcaption><span>_.compact</span><a href="http://underscorejs.org/" target="_blank" rel="external">link</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line">_.compact([0, 1, false, 2, &apos;&apos;, 3]);  </div><div class="line">=&gt; [1, 2, 3]  </div></pre></td></tr></table></figure>  
-<h3 id="Pull-Quote"><a href="#Pull-Quote" class="headerlink" title="Pull Quote"></a>Pull Quote</h3><!--10-->
-<blockquote class="pullquote [class]"><p>content  </p>
-</blockquote> 
-<iframe src="http://blog.jobbole.com/86614/" width="[100%]" height="[600]" frameborder="0" allowfullscreen></iframe>
- <img src="/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]"> 
+<p>下面是一个使用了apply方法与call方法得例子。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="keyword">this</span>.x) &#125;;</div><div class="line"><span class="keyword">var</span> obj = &#123; x:<span class="number">4</span>  &#125;;</div><div class="line">f.apply(obj); <span class="comment">//通过apply调用函数f。函数内的this引用了对象obj;</span></div><div class="line">&gt;<span class="number">4</span></div><div class="line">f.call(obj);  <span class="comment">//同理，结果也是4;</span></div><div class="line">&gt;<span class="number">4</span></div><div class="line"></div><div class="line"><span class="comment">//将接收方对象指定为另一个对象并进行调用</span></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">x:<span class="number">3</span>,</div><div class="line">doit: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'method is called. '</span>+ <span class="keyword">this</span>.x); &#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> obj2 &#123; x:<span class="number">4</span> &#125;;</div><div class="line">obj.doit.apply(obj2);</div><div class="line">&gt;method is called. <span class="number">4</span></div></pre></td></tr></table></figure></p>
+<h3 id="参数传递方式"><a href="#参数传递方式" class="headerlink" title="参数传递方式"></a>参数传递方式</h3><blockquote>
+<p>对Funtion对象f使用apply与call方法，就能调用该函数。不考虑函数内this引用的话，这和f()的方法是一样的。两者的区别被调用函数（方法）内this引用，this引用的是作为apply/call的第一个参数被传递的对象。而apply与call不同之处在于对其他参数的传递方式。对于apply来说，剩余参数将使用数组来传递而call是直接原样传递形参。</p>
+</blockquote>
+<p>下面是call与apply传递其它参数的例子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">a,b</span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">'this.x = '</span> + <span class="keyword">this</span>.x + <span class="string">',a='</span>+a+<span class="string">',b='</span>+b+<span class="string">''</span>) &#125;</div><div class="line">f.apply(&#123;x:<span class="number">4</span>&#125;,[<span class="number">1</span>,<span class="number">2</span>]); <span class="comment">//从第二个参数开始数列中的元素都是函数f的参数</span></div><div class="line">&gt;<span class="keyword">this</span>.x=<span class="number">4</span>,a=<span class="number">1</span>,b=<span class="number">2</span></div><div class="line">f.apply(&#123;x:<span class="number">4</span>&#125;,<span class="number">1</span>,<span class="number">2</span>);  <span class="comment">//从第二个参数开始都是函数f的参数</span></div><div class="line">&gt;<span class="keyword">this</span>.x=<span class="number">4</span>,a=<span class="number">1</span>,b=<span class="number">2</span></div></pre></td></tr></table></figure><br>在实际编程过程中，我们常常会为了函数回调而是用apply或call调用。</p>
 
       
     </div>
@@ -341,22 +338,32 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+            <a href="/tags/apply/" rel="tag">#apply</a>
+          
+            <a href="/tags/call/" rel="tag">#call</a>
+          
+            <a href="/tags/js/" rel="tag">#js</a>
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/13/标题渲染/" rel="next" title="标题渲染">
-                <i class="fa fa-chevron-left"></i> 标题渲染
+              <a href="/2016/08/17/深夜随想/" rel="next" title="深夜随想">
+                <i class="fa fa-chevron-left"></i> 深夜随想
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/17/深夜随想/" rel="prev" title="深夜随想">
-                深夜随想 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -382,8 +389,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/13/Hello-Word/"
-           data-title="Hello Word" data-url="http://yoursite.com/2016/08/13/Hello-Word/">
+      <div class="ds-thread" data-thread-key="2016/08/21/JavaScript-apply与call-的使用/"
+           data-title="JavaScript apply与call 的使用" data-url="http://yoursite.com/2016/08/21/JavaScript-apply与call-的使用/">
       </div>
     
   </div>
@@ -505,7 +512,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#测试标签页面（Tag-Plugins）"><span class="nav-number">1.</span> <span class="nav-text">测试标签页面（Tag Plugins）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用网络上的文章"><span class="nav-number">2.</span> <span class="nav-text">引用网络上的文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码引用（Code-Block）"><span class="nav-number">3.</span> <span class="nav-text">代码引用（Code Block）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pull-Quote"><span class="nav-number">4.</span> <span class="nav-text">Pull Quote</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数传递方式"><span class="nav-number">2.</span> <span class="nav-text">参数传递方式</span></a></li></ol></div>
             
           </div>
         </section>
